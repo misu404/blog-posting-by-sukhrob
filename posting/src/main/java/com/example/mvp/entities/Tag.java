@@ -8,15 +8,14 @@ import org.hibernate.annotations.Where;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
 @Getter
+@Setter
 @ToString
-@Entity
-@SQLDelete(sql = "update category set status='inactive' where id=?")
-@Where(clause = "status= 'active'")
-@EqualsAndHashCode(callSuper = true)
-public class Category extends AbsEntity {
+@Entity(name = "tags")
+@SQLDelete(sql = "update tags set status='inactive' where id=?")
+@Where(clause = "status='active")
+public class Tag extends AbsEntity {
 
-    private String name;
+
 
 }

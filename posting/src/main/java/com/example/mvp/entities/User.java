@@ -15,7 +15,7 @@ import java.util.List;
 @Setter
 @Getter
 @ToString
-@SQLDelete(sql = "update user set status='active' where id=?")
+@SQLDelete(sql = "update user set status='inactive' where id=?")
 @Where(clause = "status= 'active'")
 @Entity(name = "users")
 @NoArgsConstructor

@@ -19,13 +19,9 @@ import java.util.UUID;
 public class AbsEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "unique_id")
-    private UUID uniqueId;
+    private UUID id;
 
     private String status = "active";
 

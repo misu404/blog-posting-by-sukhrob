@@ -6,17 +6,16 @@ import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
+@Entity(name = "comments")
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
 @Getter
+@Setter
 @ToString
-@Entity
-@SQLDelete(sql = "update category set status='inactive' where id=?")
-@Where(clause = "status= 'active'")
-@EqualsAndHashCode(callSuper = true)
-public class Category extends AbsEntity {
+@Where(clause = "status='active'")
+@SQLDelete(sql = "update comments set status='inactive where id=?'")
+public class Comment extends AbsEntity {
 
-    private String name;
+    private String text;
 
 }
