@@ -27,7 +27,7 @@ public class AbsEntity {
     @Column(name = "unique_id")
     private UUID uniqueId;
 
-    private boolean deleted;
+    private String status = "active";
 
     @CreationTimestamp
     @Column(updatable = false)

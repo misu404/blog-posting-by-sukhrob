@@ -12,8 +12,8 @@ import org.hibernate.annotations.Where;
 @Getter
 @ToString
 @Entity
-@SQLDelete(sql = "update category set deleted=true where id=?")
-@Where(clause = "deleted=false")
+@SQLDelete(sql = "update category set status='active' where id=?")
+@Where(clause = "status= 'active'")
 @EqualsAndHashCode(callSuper = true)
 public class Category extends AbsEntity {
 
